@@ -1,5 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable react/jsx-no-comment-textnodes */
+import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import SignUp from '../pages/SignUp';
 import SignIn from '../pages/SignIn';
