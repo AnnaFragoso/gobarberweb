@@ -1,7 +1,8 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
+import Route from './Route';
 import SignUp from '../pages/SignUp';
 import SignIn from '../pages/SignIn';
 import Dashboard from '../pages/Dashboard';
@@ -12,8 +13,8 @@ export default function Routes() {
         <Switch>
             <Route path="/" exact component={SignIn} />
             <Route path="/register" component={SignUp} />
-            <Route path="/dashboard" component={Dashboard} />
-            <Route path="/profile" component={Profile} />
+            <Route path="/dashboard" component={Dashboard} isPrivate/>
+            <Route path="/profile" component={Profile} isPrivate/>
         </Switch>
     );
 }
